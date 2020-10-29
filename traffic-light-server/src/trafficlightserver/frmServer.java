@@ -64,12 +64,20 @@ public class frmServer extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(29, 40, 42));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("IP Address");
 
+        txtIPServer.setBackground(new java.awt.Color(29, 40, 42));
+        txtIPServer.setForeground(new java.awt.Color(255, 255, 255));
         txtIPServer.setText("192.168.1.5");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Port");
 
+        txtPortServer.setBackground(new java.awt.Color(29, 40, 42));
+        txtPortServer.setForeground(new java.awt.Color(255, 255, 255));
         txtPortServer.setText("16375");
 
         redPanel.setBackground(new java.awt.Color(102, 102, 102));
@@ -111,6 +119,8 @@ public class frmServer extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        btnListen.setBackground(new java.awt.Color(0, 0, 0));
+        btnListen.setForeground(new java.awt.Color(29, 144, 54));
         btnListen.setText("Listen");
         btnListen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,9 +129,11 @@ public class frmServer extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Server");
 
         statusLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        statusLabel.setForeground(new java.awt.Color(255, 255, 255));
         statusLabel.setText("All lights are off");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -203,7 +215,7 @@ public class frmServer extends javax.swing.JFrame {
     private void btnListenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListenActionPerformed
         listenData();
     }//GEN-LAST:event_btnListenActionPerformed
-
+    
     private void listenData() {
         try {
             new Thread(() -> {

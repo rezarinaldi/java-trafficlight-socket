@@ -52,31 +52,74 @@ public class frmClient extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        rBMerahOn = new javax.swing.JRadioButton();
-        rBMerahOff = new javax.swing.JRadioButton();
-        rBKuningOn = new javax.swing.JRadioButton();
-        rBKuningOff = new javax.swing.JRadioButton();
-        rBHijauOn = new javax.swing.JRadioButton();
-        rBHijauOff = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         txtIPClient = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         txtPortClient = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        rBHijauOn = new javax.swing.JRadioButton();
+        rBKuningOn = new javax.swing.JRadioButton();
+        rBMerahOn = new javax.swing.JRadioButton();
+        rBMerahOff = new javax.swing.JRadioButton();
+        rBKuningOff = new javax.swing.JRadioButton();
+        rBHijauOff = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setText("Merah");
+        jPanel1.setBackground(new java.awt.Color(29, 40, 42));
 
-        jLabel3.setText("Kuning");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("IP Address");
 
-        jLabel4.setText("Hijau");
+        txtIPClient.setBackground(new java.awt.Color(29, 40, 42));
+        txtIPClient.setForeground(new java.awt.Color(255, 255, 255));
+        txtIPClient.setText("192.168.1.5");
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Port");
+
+        txtPortClient.setBackground(new java.awt.Color(29, 40, 42));
+        txtPortClient.setForeground(new java.awt.Color(255, 255, 255));
+        txtPortClient.setText("16375");
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Client");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/red.jpg"))); // NOI18N
+        jLabel2.setText("Red");
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/yellow.jpg"))); // NOI18N
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/green.jpg"))); // NOI18N
+
+        buttonGroup3.add(rBHijauOn);
+        rBHijauOn.setForeground(new java.awt.Color(255, 255, 255));
+        rBHijauOn.setText("On");
+        rBHijauOn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rBHijauOnActionPerformed(evt);
+            }
+        });
+
+        buttonGroup2.add(rBKuningOn);
+        rBKuningOn.setForeground(new java.awt.Color(255, 255, 255));
+        rBKuningOn.setText("On");
+        rBKuningOn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rBKuningOnActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(rBMerahOn);
-        rBMerahOn.setText("Hidup");
+        rBMerahOn.setForeground(new java.awt.Color(255, 255, 255));
+        rBMerahOn.setText("On");
         rBMerahOn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rBMerahOnActionPerformed(evt);
@@ -84,120 +127,110 @@ public class frmClient extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(rBMerahOff);
-        rBMerahOff.setText("Mati");
+        rBMerahOff.setForeground(new java.awt.Color(255, 255, 255));
+        rBMerahOff.setText("Off");
         rBMerahOff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rBMerahOffActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(rBKuningOn);
-        rBKuningOn.setText("Hidup");
-        rBKuningOn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rBKuningOnActionPerformed(evt);
-            }
-        });
-
         buttonGroup2.add(rBKuningOff);
-        rBKuningOff.setText("Mati");
+        rBKuningOff.setForeground(new java.awt.Color(255, 255, 255));
+        rBKuningOff.setText("Off");
         rBKuningOff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rBKuningOffActionPerformed(evt);
             }
         });
 
-        buttonGroup3.add(rBHijauOn);
-        rBHijauOn.setText("Hidup");
-        rBHijauOn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rBHijauOnActionPerformed(evt);
-            }
-        });
-
         buttonGroup3.add(rBHijauOff);
-        rBHijauOff.setText("Mati");
+        rBHijauOff.setForeground(new java.awt.Color(255, 255, 255));
+        rBHijauOff.setText("Off");
         rBHijauOff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rBHijauOffActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("IP Address");
-
-        txtIPClient.setText("192.168.1.5");
-
-        jLabel6.setText("Port");
-
-        txtPortClient.setText("16375");
-
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel1.setText("Client");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(txtIPClient, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(txtPortClient, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(rBHijauOn)
+                                .addGap(18, 18, 18)
+                                .addComponent(rBHijauOff))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(rBKuningOn)
+                                .addGap(18, 18, 18)
+                                .addComponent(rBKuningOff))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(rBMerahOn)
+                                .addGap(18, 18, 18)
+                                .addComponent(rBMerahOff)))
+                        .addGap(55, 55, 55))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(165, 165, 165))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtIPClient, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtPortClient, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel2))
-                        .addGap(34, 34, 34)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(rBHijauOn)
-                            .addComponent(rBKuningOn)
-                            .addComponent(rBMerahOn))
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(rBKuningOff)
-                            .addComponent(rBMerahOff)
-                            .addComponent(rBHijauOff))))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(89, 89, 89))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(42, 42, 42)
                 .addComponent(jLabel1)
-                .addGap(32, 32, 32)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtIPClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPortClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIPClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rBMerahOn)
-                    .addComponent(jLabel2)
                     .addComponent(rBMerahOff))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rBKuningOff)
-                    .addComponent(rBKuningOn)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rBHijauOn)
-                    .addComponent(rBHijauOff)
-                    .addComponent(jLabel4))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtPortClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rBKuningOn)
+                            .addComponent(rBKuningOff))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rBHijauOn)
+                            .addComponent(rBHijauOff))
+                        .addGap(23, 23, 23))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
